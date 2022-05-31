@@ -36,9 +36,9 @@ function onInputValueForm(e) {
 
 function onSubmitForm(e) {
   e.preventDefault();
+  e.currentTarget.reset();
+
+  console.log(localStorage.getItem(FORM_LOCAL_STORAGE_KEY));
 
   localStorage.removeItem(FORM_LOCAL_STORAGE_KEY);
-
-  e.currentTarget.reset();
-  console.log(feedbackFormObj);
 }
